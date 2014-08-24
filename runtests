@@ -1,0 +1,25 @@
+#!/bin/bash
+
+# run with this to get short output
+# ./run_tests | grep ">>>"
+
+function run_test() {
+	echo ">>> runing test $1..."
+	if ./$1 2>&1; then
+		echo ">>> PASSED"
+		((n_passed=n_passed+1))
+	else
+		echo ">>> FAILED"
+		((n_failed=n_failed+1))
+	fi
+}
+
+n_passed=0
+n_failed=0
+
+run_test BitVectorTest.py
+
+echo ""
+echo ">>> -------------------------"
+echo ">>> n_passed = $n_passed"
+echo ">>> n_failed = $n_failed"
