@@ -18,6 +18,7 @@ n_passed=0
 n_failed=0
 
 run_test BitVectorTest.py
+run_test InstructionTest.py
 
 echo ""
 echo ">>> -------------------------"
