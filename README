@@ -1,0 +1,8 @@
+
+SourceFold is a compiler project. The main goal is to try an alternative approach to
+get simpler and faster compiler that generates more efficient code than traditional
+compilers. Also, a minimal effort should be required to add a new cpu architecture target.
+This will be achieved by extensive use of auto-generated rewrite rules, iterative compilation,
+machine learning and strongly theoretically founded methods like abstract interpretation.
+
+
