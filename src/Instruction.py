@@ -4,6 +4,8 @@
 
 OC_NOP = "NOP"
 
+OC_LABEL = "LABEL"
+
 OC_JMP = "JMP"
 OC_CALL = "CALL"
 OC_RET = "RET"
