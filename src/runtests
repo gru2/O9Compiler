@@ -4,7 +4,7 @@
 # ./run_tests | grep ">>>"
 
 function run_test() {
-	echo ">>> runing test $1..."
+	echo ">>> running test $1..."
 	if ./$1 2>&1; then
 		echo ">>> PASSED"
 		((n_passed=n_passed+1))
@@ -19,6 +19,7 @@ n_failed=0
 
 run_test BitVectorTest.py
 run_test InstructionTest.py
+run_test IntermediateRepresentationTest.py
 
 echo ""
 echo ">>> -------------------------"

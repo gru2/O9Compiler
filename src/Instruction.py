@@ -4,29 +4,29 @@
 
 OC_NOP = "NOP"
 
-OP_MOVE = "MOVE"
+OC_JMP = "JMP"
+OC_CALL = "CALL"
+OC_RET = "RET"
 
-OP_JMP = "JMP"
-OP_CALL = "CALL"
-OP_RET = "RET"
+OC_MOVE = "MOVE"
 
-OP_ADD = "ADD"
-OP_SUB = "SUB"
-OP_MUL = "MUL"
-OP_DIV = "DIV"
-OP_NEG = "NEG"
+OC_ADD = "ADD"
+OC_SUB = "SUB"
+OC_MUL = "MUL"
+OC_DIV = "DIV"
+OC_NEG = "NEG"
 
-OP_AND = "AND"
-OP_OR = "OR"
-OP_XOR = "XOR"
-OP_NOT = "NOT"
+OC_AND = "AND"
+OC_OR = "OR"
+OC_XOR = "XOR"
+OC_NOT = "NOT"
 
-OP_EQ = "EQ"
-OP_NEQ = "NEQ"
-OP_LT = "LT"
-OP_LE = "LE"
-OP_GT = "GT"
-OP_GE = "GE"
+OC_EQ = "EQ"
+OC_NEQ = "NEQ"
+OC_LT = "LT"
+OC_LE = "LE"
+OC_GT = "GT"
+OC_GE = "GE"
 
 
 class Instruction:
