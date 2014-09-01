@@ -20,6 +20,7 @@ n_failed=0
 run_test BitVectorTest.py
 run_test InstructionTest.py
 run_test IntermediateRepresentationTest.py
+run_test CodeEmitterTest.py
 
 echo ""
 echo ">>> -------------------------"
