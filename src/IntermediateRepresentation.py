@@ -3,12 +3,18 @@
 """ Implementation of class IntermediateRepresentation. """
 
 import Instruction
+import ResourceClass
 
 
 class IntermediateRepresentation:
 
     def __init__(self):
-        pass
+        self.abstractRegisterResourceClass = None
+
+    def initResourceClasses(self):
+        self.abstractRegisterResourceClass = ResourceClass.ResourceClass()
+        rc = self.abstractRegisterResourceClass
+        rc.name = "abstract register"
 
     def createNop(self):
         insn = Instruction.Instruction()

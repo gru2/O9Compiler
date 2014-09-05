@@ -30,6 +30,12 @@ OC_LE = "LE"
 OC_GT = "GT"
 OC_GE = "GE"
 
+OC_BEGFN = "BEGFN"
+OC_ENDFN = "ENDFN"
+
+OC_ARG = "ARG"
+OC_VAR = "VAR"
+
 
 class Instruction:
 
