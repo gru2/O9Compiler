@@ -20,6 +20,9 @@ class CodeEmitter:
         s = self.replaceOperands(instruction, template)
         return s
 
+    def operandToString(self, operand):
+        return "r"
+
     def findTemplate(self, opcode):
         if self.instructionTemplates.has_key(opcode):
             return self.instructionTemplates[opcode]
@@ -33,7 +36,7 @@ class CodeEmitter:
         s = template
         return s
 
-    def addAbstractInstructionTemplates(self):
+    def addVirtualInstructionTemplates(self):
         i = Instruction
         t = { i.OC_NOP : "NOP", i.OC_JMP : "JMP\t%1", i.OC_CALL : "CALL\t%1", \
             i.OC_RET : "RET\t%1", i.OC_MOVE : "MOVE\t%1 %2", \
@@ -44,7 +47,10 @@ class CodeEmitter:
             i.OC_NOT : "NOT\t%1 %2", \
             i.OC_EQ : "EQ\t%1 %2 %3", i.OC_NEQ : "NEQ\t%1 %2 %3", \
             i.OC_LT : "LT\t%1 %2 %3", i.OC_LE : "LE\t%1 %2 %3", \
-            i.OC_GT : "GT\t%1 %2 %3", i.OC_GE : "GE\t%1 %2 %3" }
+            i.OC_GT : "GT\t%1 %2 %3", i.OC_GE : "GE\t%1 %2 %3", \
+            i.OC_LOAD : "LOAD\t%1 %2", i.OC_STORE : "STORE\t%1 %2", \
+            i.OC_BEGFN : "BEGFN", i.OC_ENDFN : "ENDFN", \
+            i.OC_ARG : "ARG\t%1 %2", i.OC_VAR : "VAR\t%1 %2" }
 
         for opcode in t:
             self.instructionTemplates[opcode] = "\t" + t[opcode] + "\n"

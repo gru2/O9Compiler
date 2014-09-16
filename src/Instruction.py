@@ -30,6 +30,9 @@ OC_LE = "LE"
 OC_GT = "GT"
 OC_GE = "GE"
 
+OC_LOAD = "LOAD"
+OC_STORE = "STORE"
+
 OC_BEGFN = "BEGFN"
 OC_ENDFN = "ENDFN"
 
